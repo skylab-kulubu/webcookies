@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: red;
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background: #373B44;  
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+  background: linear-gradient(to right, #4286f4, #373B44); 
+  transition: all ;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+p {
+  display: flex;
+  background-color: #333;
+
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
