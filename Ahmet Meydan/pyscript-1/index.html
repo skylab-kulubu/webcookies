@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 100px;
+
+        }
+        .game_container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .button_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="game_container">
+        <div class="player1_container">
+            <h1>
+                Player 1
+            </h1>
+            <p id="player1">
+                0
+            </p>
+        </div>
+        <div class="player2_container">
+            <h1>
+                Player2
+            </h1>
+            <p id="player2">
+                0
+            </p>
+        </div>
+    </div>
+    <div class="button_container">
+        <button id="btn">
+            bas
+        </button>
+        <p>
+            (buton çalışmıyor sayfayı yenile)
+        </p>
+    </div>
+    <py-config type="json" style="display: none;">
+        {
+          "packages": ["numpy"]
+        }
+    </py-config>
+    <py-script style=" display: none;">
+        from js import window, document, console
+        import numpy as np
+
+        button = document.getElementById("btn")
+        player1 = document.getElementById("player1")
+        player2 = document.getElementById("player2")
+
+
+        def randomnum():
+            x = np.random.randint(1,4)
+            y = np.random.randint(1,4)
+
+            if x == 1:
+                player1.innerHTML = "tas"
+            elif x == 2:
+                player1.innerHTML = "kagıt"
+            elif x == 3:
+                player1.innerHTML = "makas"
+
+            if y == 1:
+                player2.innerHTML = "tas"
+            elif y == 2:
+                player2.innerHTML = "kagıt"
+            elif y == 3:
+                player2.innerHTML = "makas"
+
+        button.onclick = randomnum()
+
+    </py-script>
+  </body>
+</html>
