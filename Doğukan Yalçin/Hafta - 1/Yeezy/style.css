@@ -1,0 +1,82 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  background-color: rgb(0, 0, 0);
+}
+.section-padding {
+  padding: 100px 0;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+}
+.carousel-item img {
+  height: 100vh;
+  object-fit: contain;
+}
+.carousel-caption {
+  bottom: 120px;
+  z-index: 2;
+}
+.carousel-caption h5 {
+  font-size: 33px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: relative;
+}
+.navbar-nav a::after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 6px;
+  bottom: 0px;
+  margin-top: -3px;
+  transition: ease-out 0.2s;
+}
+.navbar-nav a:hover::after {
+  width: 60%;
+}
+
+.navbar-custom {
+  background-color: black;
+}
+
+#services .card-body i {
+  font-size: 30px;
+}
+#team .card-body i {
+  font-size: 20px;
+}
+.portfolio .card {
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team .card {
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}

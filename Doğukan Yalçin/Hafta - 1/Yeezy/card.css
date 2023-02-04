@@ -1,0 +1,106 @@
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 470px) {
+  .card {
+    width: 180px;
+  }
+}
+
+.dress-name {
+  font-size: 13px;
+  font-weight: bold;
+  width: 75%;
+}
+
+.new-price {
+  font-weight: bold;
+  color: black;
+}
+
+.item-size {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid grey;
+  color: grey;
+  font-size: 10px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.rating-star {
+  font-size: 12px !important;
+}
+.rating-number {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+}
+
+.buy {
+  padding: 8px;
+  cursor: pointer;
+}
+.buy a {
+  font-size: 14px;
+
+  text-decoration: none;
+  margin: 3px;
+
+  color: rgb(83, 24, 24);
+  font-weight: bold;
+  padding: 8px;
+  cursor: pointer;
+  border: rgba(0, 0, 0, 0) 2px solid;
+  border-radius: 30px;
+  animation: ease-in 0.8;
+}
+.buy a::after {
+  content: "";
+  background: rgb(83, 24, 24);
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 4px;
+  bottom: 0px;
+  margin-top: -3px;
+  transition: ease-out 0.2s;
+}
+.buy a:hover::after {
+  width: 60%;
+}
+.card .card-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+  height: 250px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+.card:hover .card-img {
+   
+    height: 270px;
+  
+  }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+}
+
